@@ -1,2 +1,4 @@
 # MoNuSeg-Challenge
-This repo contains my implementation of a model to carry out instance segmentation of nuclei in various tissue images 
+This is my implementation of a model to carry out instance segmentation of nuclei in various tissue images as part of the MoNuSeg challenge. I have created a model carrying out patch-based segmentation on 51x51 images extracted from the original images. The model is a CNN-2 model and classifies all pixels as either belonging to the nuclei (value = 1) or the background (value = 0). Training was done on 9600 patches extracted from a set of 24 images and 7500 patches extracted from 6 other images were used for cross-validation. Training lasted for 41 epochs using early stopping with a patience of 15 on the validation loss. Final accuracy achieved on the training set was 0.886 and on the validation set was 0.911. Average Jaccard Index computed on the validation set came out to be 0.665 following post-processing operations carried out to remove noisy pixels.
+
+Further improvements to be made on the model by utilising a CNN-3 architechture and better post-precessing techniques following the training.
